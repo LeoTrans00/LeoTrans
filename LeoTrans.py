@@ -23,7 +23,7 @@ LANGUAGE_OPTIONS = [
     "Basque", "Belarusian", "Bengali", "Bosnian", "Bulgarian", "Burmese", "Cantonese",
     "Catalan", "Cebuano", "Chichewa", "Chinese", "Chinese (Traditional)", "Corsican", "Croatian", "Czech",
     "Danish", "Dutch",
-    "English (US)", "English (UK)", "English (Normal)", "Esperanto", "Estonian",
+    "English", "Esperanto", "Estonian",
     "Filipino", "Finnish", "French", "Frisian",
     "Galician", "Georgian", "German", "Greek", "Gujarati",
     "Haitian Creole", "Hausa", "Hawaiian", "Hebrew", "Hinglish", "Hmong", "Hungarian",
@@ -60,9 +60,9 @@ def save_config():
 
 def get_prompt_for_language(language):
     if language == "Hinglish":
-        return "Translate the following Hindi text to Hinglish (Hindi words written in English script) in a natural, fluent, and respectful tone, as if speaking to a senior person. Use 'Aap' instead of 'Tu' to show respect."
+        return "Translate the following Bengali text into fluent and natural Hinglish (Hindi words written in English script). Keep the tone respectful and conversational, as if speaking to a senior person, using 'Aap' instead of 'Tum' or 'Tu' to show respect. Ensure the meaning and context stay accurate, blending Hindi and English seamlessly. The response should sound like it’s coming from a 30-year-old Indian woman answering casually yet respectfully"
     else:
-        return f"Translate the following text to {language} in a natural, fluent, and respectful tone, as if speaking to a senior person."
+        return f"Translate the following Bengali text into direct and natural {language}. Keep the tone straightforward and conversational, avoiding unnecessary formality or politeness unless explicitly stated in the text. Ensure the meaning and context remain accurate."
     
 def custom_popup(title, message, fg_color):
     popup = tk.Toplevel(root)
